@@ -103,7 +103,7 @@
       </thingDefs>
     </fixedIngredientFilter>
     <products>
-      <Ammo_PlasmaRifle>20</Ammo_PlasmaRifle>
+      <Ammo_CMPlasmaRifle>20</Ammo_CMPlasmaRifle>
     </products>
 	<researchPrerequisite>WRPlasmaRifle</researchPrerequisite>
   </RecipeDef>

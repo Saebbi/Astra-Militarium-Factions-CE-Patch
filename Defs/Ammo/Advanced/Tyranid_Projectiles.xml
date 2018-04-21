@@ -17,6 +17,13 @@
 			<speed>75</speed>
 			<soundExplode>SpitterHitSound</soundExplode>
 		</projectile>
+		<comps>
+			<li Class="CombatExtended.CompProperties_ExplosiveCE">
+				<explosionDamage>4</explosionDamage>
+				<explosionDamageDef>IGPlagueDmg_Spitter</explosionDamageDef>
+				<explosionRadius>1.0</explosionRadius>
+			</li>
+		</comps>
 	</ThingDef>
 	
 	<ThingDef ParentName="BaseBullet">
