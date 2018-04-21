@@ -1,0 +1,296 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Patch>
+
+	<Operation Class="CombatExtended.PatchOperationMakeGunCECompatible">
+		<defName>Gun_TyrannocyteSpitter</defName>
+		<statBases>
+			<SightsEfficiency>0.85</SightsEfficiency>
+			<ShotSpread>0.07</ShotSpread>
+			<SwayFactor>1.25</SwayFactor>
+			<Bulk>11.2</Bulk> 
+		</statBases>
+		<Properties>
+			<verbClass>CombatExtended.Verb_ShootCE</verbClass>
+			<hasStandardCommand>true</hasStandardCommand>
+			<defaultProjectile>Bullet_TyrannocyteSpitter</defaultProjectile>
+			<warmupTime>0.9</warmupTime>
+			<range>25</range>
+			<ticksBetweenBurstShots>20</ticksBetweenBurstShots>
+			<burstShotCount>3</burstShotCount>
+			<soundCast>SpitterSound</soundCast>
+			<soundCastTail>GunTail_Medium</soundCastTail>
+			<muzzleFlashScale>10</muzzleFlashScale>
+		</Properties>
+		<FireModes>
+			<aiAimMode>AimedShot</aiAimMode>
+		</FireModes>
+		<weaponTags>
+			<li>TyrannocyteSpitter</li>
+		</weaponTags>
+	</Operation>
+	
+	<Operation Class="CombatExtended.PatchOperationMakeGunCECompatible">
+		<defName>Gun_BPCannon</defName>
+		<statBases>
+			<SightsEfficiency>0.85</SightsEfficiency>
+			<ShotSpread>0.07</ShotSpread>
+			<SwayFactor>1.25</SwayFactor>
+			<Bulk>11.2</Bulk> 
+		</statBases>
+		<Properties>
+			<verbClass>CombatExtended.Verb_ShootCE</verbClass>
+			<hasStandardCommand>true</hasStandardCommand>
+			<defaultProjectile>Bullet_BPCannon</defaultProjectile>
+			<warmupTime>2.0</warmupTime>
+			<range>45</range>
+			<ticksBetweenBurstShots>30</ticksBetweenBurstShots>
+			<burstShotCount>1</burstShotCount>
+			<soundCast>BioPlasmaGunSound</soundCast>
+			<soundCastTail>GunTail_Medium</soundCastTail>
+			<muzzleFlashScale>10</muzzleFlashScale>
+			<recoilAmount>1.3</recoilAmount>
+			<recoilPattern>Regular</recoilPattern>
+		</Properties>
+		<FireModes>
+			<aiUseBurstMode>TRUE</aiUseBurstMode>
+		</FireModes>
+		<weaponTags>
+			<li>BPCannon</li>
+		</weaponTags>
+	</Operation>
+	
+	<Operation Class="PatchOperationReplace">
+		<xpath>*/ThingDef[defName="Melee_TyranidClaw_A"]/tools</xpath>
+		<value>
+			<tools>
+				<li Class="CombatExtended.ToolCE">
+					<label>handle</label>
+					<capacities>
+						<li>Blunt</li>
+					</capacities>
+					<power>10</power>
+					<cooldownTime>1.0</cooldownTime>
+					<armorPenetration>0.12</armorPenetration>
+				</li>
+				<li Class="CombatExtended.ToolCE">
+					<label>point</label>
+					<capacities>
+						<li>Stab</li>
+					</capacities>
+					<power>24</power>
+					<cooldownTime>1.0</cooldownTime>
+					<armorPenetration>0.35</armorPenetration>
+				</li>
+				<li Class="CombatExtended.ToolCE">
+					<label>blade</label>
+					<capacities>
+						<li>Cut</li>
+					</capacities>
+					<power>18</power>
+					<cooldownTime>1.0</cooldownTime>
+					<commonality>1.33</commonality>
+					<armorPenetration>0.35</armorPenetration>
+				</li>
+			</tools>
+		</value>
+	</Operation>
+
+	<Operation Class="PatchOperationAdd">
+		<xpath>*/ThingDef[defName="Melee_TyranidClaw_A"]/statBases</xpath>
+		<value>
+      <Bulk>3.5</Bulk>
+		</value>
+	</Operation>
+
+	<Operation Class="PatchOperationAdd">
+		<xpath>*/ThingDef[defName="Melee_TyranidClaw_A"]</xpath>
+		<value>
+			<equippedStatOffsets>
+				<MeleeCritChance>0.4</MeleeCritChance>
+				<MeleeParryChance>0.03</MeleeParryChance>
+			</equippedStatOffsets>
+		</value>
+	</Operation>
+
+	<!-- Add tags -->
+
+	<Operation Class="PatchOperationSequence">
+  	<success>Always</success>
+  	<operations>
+    	<li Class="PatchOperationTest">
+      	<xpath>*/ThingDef[defName="Melee_TyranidClaw_A"]/weaponTags</xpath>
+      	<success>Invert</success>
+    	</li>
+    	<li Class="PatchOperationAdd">
+      	<xpath>*/ThingDef[defName="Melee_TyranidClaw_A"]</xpath>
+      	<value>
+        	<weaponTags />
+      	</value>
+    	</li>
+  	</operations>
+	</Operation>
+
+	<Operation Class="PatchOperationAdd">
+		<xpath>*/ThingDef[defName="Melee_TyranidClaw_A"]/weaponTags</xpath>
+		<value>
+      <li>TyranidClawA</li>
+		</value>
+	</Operation>
+	
+	<Operation Class="PatchOperationReplace">
+		<xpath>*/ThingDef[defName="Melee_TyranidClaw_B"]/tools</xpath>
+		<value>
+			<tools>
+				<li Class="CombatExtended.ToolCE">
+					<label>handle</label>
+					<capacities>
+						<li>Blunt</li>
+					</capacities>
+					<power>17</power>
+					<cooldownTime>0.8</cooldownTime>
+					<armorPenetration>0.12</armorPenetration>
+				</li>
+				<li Class="CombatExtended.ToolCE">
+					<label>point</label>
+					<capacities>
+						<li>Stab</li>
+					</capacities>
+					<power>45</power>
+					<cooldownTime>0.8</cooldownTime>
+					<armorPenetration>0.55</armorPenetration>
+				</li>
+				<li Class="CombatExtended.ToolCE">
+					<label>blade</label>
+					<capacities>
+						<li>Cut</li>
+					</capacities>
+					<power>31</power>
+					<cooldownTime>0.8</cooldownTime>
+					<commonality>1.33</commonality>
+					<armorPenetration>0.55</armorPenetration>
+				</li>
+			</tools>
+		</value>
+	</Operation>
+
+	<Operation Class="PatchOperationAdd">
+		<xpath>*/ThingDef[defName="Melee_TyranidClaw_B"]/statBases</xpath>
+		<value>
+      <Bulk>3.5</Bulk>
+		</value>
+	</Operation>
+
+	<Operation Class="PatchOperationAdd">
+		<xpath>*/ThingDef[defName="Melee_TyranidClaw_B"]</xpath>
+		<value>
+			<equippedStatOffsets>
+				<MeleeCritChance>0.45</MeleeCritChance>
+				<MeleeParryChance>0.04</MeleeParryChance>
+			</equippedStatOffsets>
+		</value>
+	</Operation>
+
+	<!-- Add tags -->
+
+	<Operation Class="PatchOperationSequence">
+  	<success>Always</success>
+  	<operations>
+    	<li Class="PatchOperationTest">
+      	<xpath>*/ThingDef[defName="Melee_TyranidClaw_B"]/weaponTags</xpath>
+      	<success>Invert</success>
+    	</li>
+    	<li Class="PatchOperationAdd">
+      	<xpath>*/ThingDef[defName="Melee_TyranidClaw_B"]</xpath>
+      	<value>
+        	<weaponTags />
+      	</value>
+    	</li>
+  	</operations>
+	</Operation>
+
+	<Operation Class="PatchOperationAdd">
+		<xpath>*/ThingDef[defName="Melee_TyranidClaw_B"]/weaponTags</xpath>
+		<value>
+      <li>TyranidClawB</li>
+		</value>
+	</Operation>
+	
+	<Operation Class="PatchOperationReplace">
+		<xpath>*/ThingDef[defName="Melee_TyranidClaw_C"]/tools</xpath>
+		<value>
+			<tools>
+				<li Class="CombatExtended.ToolCE">
+					<label>handle</label>
+					<capacities>
+						<li>Blunt</li>
+					</capacities>
+					<power>24</power>
+					<cooldownTime>1.1</cooldownTime>
+					<armorPenetration>0.12</armorPenetration>
+				</li>
+				<li Class="CombatExtended.ToolCE">
+					<label>point</label>
+					<capacities>
+						<li>Stab</li>
+					</capacities>
+					<power>53</power>
+					<cooldownTime>1.1</cooldownTime>
+					<armorPenetration>0.75</armorPenetration>
+				</li>
+				<li Class="CombatExtended.ToolCE">
+					<label>blade</label>
+					<capacities>
+						<li>Cut</li>
+					</capacities>
+					<power>45</power>
+					<cooldownTime>1.1</cooldownTime>
+					<commonality>1.33</commonality>
+					<armorPenetration>0.75</armorPenetration>
+				</li>
+			</tools>
+		</value>
+	</Operation>
+
+	<Operation Class="PatchOperationAdd">
+		<xpath>*/ThingDef[defName="Melee_TyranidClaw_C"]/statBases</xpath>
+		<value>
+      <Bulk>3.5</Bulk>
+		</value>
+	</Operation>
+
+	<Operation Class="PatchOperationAdd">
+		<xpath>*/ThingDef[defName="Melee_TyranidClaw_C"]</xpath>
+		<value>
+			<equippedStatOffsets>
+				<MeleeCritChance>0.6</MeleeCritChance>
+				<MeleeParryChance>0.04</MeleeParryChance>
+			</equippedStatOffsets>
+		</value>
+	</Operation>
+
+	<!-- Add tags -->
+
+	<Operation Class="PatchOperationSequence">
+  	<success>Always</success>
+  	<operations>
+    	<li Class="PatchOperationTest">
+      	<xpath>*/ThingDef[defName="Melee_TyranidClaw_C"]/weaponTags</xpath>
+      	<success>Invert</success>
+    	</li>
+    	<li Class="PatchOperationAdd">
+      	<xpath>*/ThingDef[defName="Melee_TyranidClaw_C"]</xpath>
+      	<value>
+        	<weaponTags />
+      	</value>
+    	</li>
+  	</operations>
+	</Operation>
+
+	<Operation Class="PatchOperationAdd">
+		<xpath>*/ThingDef[defName="Melee_TyranidClaw_C"]/weaponTags</xpath>
+		<value>
+      <li>TyranidClawC</li>
+		</value>
+	</Operation>
+	
+</Patch>

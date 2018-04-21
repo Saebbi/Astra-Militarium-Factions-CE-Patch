@@ -1,0 +1,160 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<Patch>
+
+	<Operation Class="PatchOperationSequence">
+		<success>Always</success>
+		<operations>
+			<li Class="CombatExtended.PatchOperationFindMod">
+				<modName>Astra Militarum Imperial Guard Factions Mod v1.71</modName>
+			</li>
+
+			<li Class="PatchOperationAddModExtension">
+				<xpath>*/ThingDef[defName="Tyranid_Mawlock"]</xpath>
+				<value>
+					<li Class="CombatExtended.RacePropertiesExtensionCE">
+						<bodyShape>Humanoid</bodyShape>
+					</li>
+				</value>
+			</li>
+			<li Class="PatchOperationReplace">
+				<xpath>*/ThingDef[defName="Tyranid_Mawlock"]/tools</xpath>
+				<value>
+					<tools>
+						<li Class="CombatExtended.ToolCE">
+							<capacities>
+								<li>ToxicBite</li>
+							</capacities>
+							<power>5</power>
+							<cooldownTime>0.25</cooldownTime>
+							<linkedBodyPartsGroup>TYHeadAttackTool</linkedBodyPartsGroup>
+							<surpriseAttack>
+								<extraMeleeDamages>
+									<li>
+										<def>Stun</def>
+										<amount>5</amount>
+									</li>
+								</extraMeleeDamages>
+							</surpriseAttack>
+							<armorPenetration>0.3</armorPenetration>
+						</li>
+					</tools>
+				</value>
+			</li>
+			
+			<li Class="PatchOperationAddModExtension">
+				<xpath>*/ThingDef[defName="Tyranid_Broodlord"]</xpath>
+				<value>
+					<li Class="CombatExtended.RacePropertiesExtensionCE">
+						<bodyShape>Humanoid</bodyShape>
+					</li>
+				</value>
+			</li>
+			<li Class="PatchOperationReplace">
+				<xpath>*/ThingDef[defName="Tyranid_Broodlord"]/tools</xpath>
+				<value>
+					<tools>
+						<li Class="CombatExtended.ToolCE">
+							<capacities>
+								<li>ToxicBite</li>
+							</capacities>
+							<power>5</power>
+							<cooldownTime>0.35</cooldownTime>
+							<linkedBodyPartsGroup>TYHeadAttackTool</linkedBodyPartsGroup>
+							<surpriseAttack>
+								<extraMeleeDamages>
+									<li>
+										<def>Stun</def>
+										<amount>5</amount>
+									</li>
+								</extraMeleeDamages>
+							</surpriseAttack>
+							<armorPenetration>0.35</armorPenetration>
+						</li>
+					</tools>
+				</value>
+			</li>
+			
+			<li Class="PatchOperationAddModExtension">
+				<xpath>*/ThingDef[defName="Tyranid_GeneStealer"]</xpath>
+				<value>
+					<li Class="CombatExtended.RacePropertiesExtensionCE">
+						<bodyShape>Humanoid</bodyShape>
+					</li>
+				</value>
+			</li>
+			<li Class="PatchOperationReplace">
+				<xpath>*/ThingDef[defName="Tyranid_GeneStealer"]/tools</xpath>
+				<value>
+					<tools>
+						<li Class="CombatExtended.ToolCE">
+							<capacities>
+								<li>ToxicBite</li>
+							</capacities>
+							<power>5</power>
+							<cooldownTime>0.5</cooldownTime>
+							<linkedBodyPartsGroup>TYHeadAttackTool</linkedBodyPartsGroup>
+							<surpriseAttack>
+								<extraMeleeDamages>
+									<li>
+										<def>Stun</def>
+										<amount>5</amount>
+									</li>
+								</extraMeleeDamages>
+							</surpriseAttack>
+							<armorPenetration>0.3</armorPenetration>
+						</li>
+					</tools>
+				</value>
+			</li>
+			
+			<li Class="PatchOperationAddModExtension">
+				<xpath>*/ThingDef[defName="Tyranid_Exocrine"]</xpath>
+				<value>
+					<li Class="CombatExtended.RacePropertiesExtensionCE">
+						<bodyShape>Quadruped</bodyShape>
+					</li>
+				</value>
+			</li>
+			<li Class="PatchOperationReplace">
+				<xpath>*/ThingDef[defName="Tyranid_Exocrine"]/verbs</xpath>
+				<value>
+					<tools>
+						<li Class="CombatExtended.ToolCE">
+							<capacities>
+								<li>Blunt</li>
+							</capacities>
+							<power>10</power>
+							<cooldownTime>2.0</cooldownTime>
+							<armorPenetration>0.15</armorPenetration>
+						</li>
+					</tools>
+				</value>
+			</li>			
+		
+			<li Class="PatchOperationAddModExtension">
+				<xpath>*/ThingDef[defName="Tyranid_Tyrannocyte"]</xpath>
+				<value>
+					<li Class="CombatExtended.RacePropertiesExtensionCE">
+						<bodyShape>Birdlike</bodyShape>
+					</li>
+				</value>
+			</li>
+			<li Class="PatchOperationReplace">
+				<xpath>*/ThingDef[defName="Tyranid_Tyrannocyte"]/verbs</xpath>
+				<value>
+					<tools>
+						<li Class="CombatExtended.ToolCE">
+							<capacities>
+								<li>Blunt</li>
+							</capacities>
+							<power>10</power>
+							<cooldownTime>2.0</cooldownTime>
+							<armorPenetration>0.15</armorPenetration>
+						</li>
+					</tools>
+				</value>
+			</li>		
+		</operations>
+	</Operation>
+
+</Patch>

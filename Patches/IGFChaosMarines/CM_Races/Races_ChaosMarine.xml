@@ -1,0 +1,98 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Patch>
+
+	<Operation Class="PatchOperationReplace">
+		<success>Always</success>
+		<xpath>*/ThingDef[defName="IG_StdChaosMarineRace"]/tools</xpath>
+		<value>
+			<tools>
+				<li Class="CombatExtended.ToolCE">
+					<label>left fist</label>
+					<capacities>
+						<li>Blunt</li>
+					</capacities>
+					<power>25</power>
+					<cooldownTime>1.3</cooldownTime>
+					<linkedBodyPartsGroup>IG_CM_LeftHand</linkedBodyPartsGroup>
+					<surpriseAttack>
+						<extraMeleeDamages>
+							<li>
+								<def>Stun</def>
+								<amount>32</amount>
+							</li>
+						</extraMeleeDamages>
+					</surpriseAttack>
+					<armorPenetration>0.5</armorPenetration>
+				</li>
+				<li Class="CombatExtended.ToolCE">
+					<label>right fist</label>
+					<capacities>
+						<li>Blunt</li>
+					</capacities>
+					<power>25</power>
+					<cooldownTime>1.3</cooldownTime>
+					<linkedBodyPartsGroup>IG_CM_RightHand</linkedBodyPartsGroup>
+					<surpriseAttack>
+						<extraMeleeDamages>
+							<li>
+								<def>Stun</def>
+								<amount>32</amount>
+							</li>
+						</extraMeleeDamages>
+					</surpriseAttack>
+					<armorPenetration>0.5</armorPenetration>
+				</li>
+				<li Class="CombatExtended.ToolCE">
+					<label>head</label>
+					<capacities>
+						<li>Blunt</li>
+					</capacities>
+					<power>15</power>
+					<cooldownTime>1.3</cooldownTime>
+					<linkedBodyPartsGroup>IG_CM_HeadAttackTool</linkedBodyPartsGroup>
+					<armorPenetration>0.35</armorPenetration>
+					<commonality>0.2</commonality>
+				</li>
+			</tools>
+		</value>
+	</Operation>
+
+	<Operation Class="PatchOperationSequence">
+		<success>Always</success>
+		<operations>
+			<li Class="PatchOperationTest">
+				<xpath>*/ThingDef[defName="IG_StdChaosMarineRace"]/comps</xpath>
+				<success>Invert</success>
+			</li>
+			<li Class="PatchOperationAdd">
+				<xpath>*/ThingDef[defName="IG_StdChaosMarineRace"]</xpath>
+				<value>
+					<comps />
+				</value>
+			</li>
+		</operations>
+	</Operation>
+
+	<Operation Class="PatchOperationAdd">
+		<success>Always</success>
+		<xpath>*/ThingDef[defName="IG_StdChaosMarineRace"]/comps</xpath>
+		<value>
+			<li>
+			  <compClass>CombatExtended.CompPawnGizmo</compClass>
+			</li>
+			<li Class="CombatExtended.CompProperties_Suppressable" />
+		</value>
+	</Operation>
+
+	<Operation Class="PatchOperationAdd">
+		<success>Always</success>
+		<xpath>*/ThingDef[defName="IG_ChaosMarineRaceBase"]/comps</xpath>
+		<value>
+			<statBases>
+				<CarryWeight>560</CarryWeight>
+			</statBases>
+		</value>
+	</Operation>
+	
+</Patch>
+

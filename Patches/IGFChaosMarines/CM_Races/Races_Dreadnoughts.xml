@@ -1,0 +1,97 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Patch>
+	
+	<Operation Class="PatchOperationAddModExtension">
+		<success>Always</success>
+		<xpath>*/ThingDef[defName="IG_CMDreadnoughtRace"]</xpath>
+		<value>
+			<li Class="CombatExtended.RacePropertiesExtensionCE">
+				<bodyShape>Humanoid</bodyShape>
+			</li>
+		</value>
+	</Operation>
+
+	<Operation Class="PatchOperationReplace">
+		<success>Always</success>
+		<xpath>*/ThingDef[defName="IG_CMDreadnoughtRace"]/tools</xpath>
+		<value>
+			<tools>
+				<li Class="CombatExtended.ToolCE">
+					<label>DreadNought Close Combat Blade</label>
+					<capacities>
+						<li>Slash</li>
+					</capacities>
+					<power>100</power>
+					<cooldownTime>1.2</cooldownTime>
+					<linkedBodyPartsGroup>IG_RightHand</linkedBodyPartsGroup>
+					<surpriseAttack>
+						<extraMeleeDamages>
+							<li>
+								<def>Stun</def>
+								<amount>100</amount>
+							</li>
+						</extraMeleeDamages>
+					</surpriseAttack>
+					<armorPenetration>0.75</armorPenetration>
+				</li>
+				<li Class="CombatExtended.ToolCE">
+					<label>DreadNought Close Combat Knife</label>
+					<capacities>
+						<li>Slash</li>
+					</capacities>
+					<power>100</power>
+					<cooldownTime>1.2</cooldownTime>
+					<linkedBodyPartsGroup>IG_LeftHand</linkedBodyPartsGroup>
+					<surpriseAttack>
+						<extraMeleeDamages>
+							<li>
+								<def>Stun</def>
+								<amount>100</amount>
+							</li>
+						</extraMeleeDamages>
+					</surpriseAttack>
+					<armorPenetration>0.65</armorPenetration>
+				</li>
+			</tools>
+		</value>
+	</Operation>
+
+	<Operation Class="PatchOperationSequence">
+		<success>Always</success>
+		<operations>
+			<li Class="PatchOperationTest">
+				<xpath>*/ThingDef[defName="IG_CMDreadnoughtRace"]/comps</xpath>
+				<success>Invert</success>
+			</li>
+			<li Class="PatchOperationAdd">
+				<xpath>*/ThingDef[defName="IG_CMDreadnoughtRace"]</xpath>
+				<value>
+					<comps />
+				</value>
+			</li>
+		</operations>
+	</Operation>
+
+	<Operation Class="PatchOperationAdd">
+		<success>Always</success>
+		<xpath>*/ThingDef[defName="IG_CMDreadnoughtRace"]/comps</xpath>
+		<value>
+			<li>
+			  <compClass>CombatExtended.CompPawnGizmo</compClass>
+			</li>
+			<li Class="CombatExtended.CompProperties_Suppressable" />
+		</value>
+	</Operation>
+
+	<Operation Class="PatchOperationReplace">
+		<success>Always</success>
+		<xpath>*/ThingDef[defName="IG_CMDreadnoughtRace"]/comps</xpath>
+		<value>
+			<statBases>
+				<CarryWeight>5000</CarryWeight>
+			</statBases>
+		</value>
+	</Operation>
+	
+</Patch>
+

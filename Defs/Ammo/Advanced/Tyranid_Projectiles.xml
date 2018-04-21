@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Defs>
+
+	<ThingDef ParentName="BaseBullet">
+		<defName>Bullet_TyrannocyteSpitter</defName>
+		<label>Spitter Bullet</label>
+		<thingClass>CombatExtended.ProjectileCE_Explosive</thingClass>
+		<graphicData>
+			<texPath>Things/IGCore/Projectile/SpitterShotSml</texPath>
+			<graphicClass>Graphic_Single</graphicClass>
+			<shaderType>TransparentPostLight</shaderType>
+		</graphicData>
+		<projectile>
+			<damageDef>IGPlagueDmg_Spitter</damageDef>
+			<damageAmountBase>4</damageAmountBase>
+			<explosionRadius>1.0</explosionRadius>
+			<speed>75</speed>
+			<soundExplode>SpitterHitSound</soundExplode>
+		</projectile>
+	</ThingDef>
+	
+	<ThingDef ParentName="BaseBullet">
+		<defName>Bullet_BPCannon</defName>
+		<label>Bio-Plasmic Bullet</label>
+		<thingClass>CombatExtended.ProjectileCE_Explosive</thingClass>
+		<graphicData>
+			<texPath>Things/IGCore/Projectile/SpitterShotLrg</texPath>
+			<graphicClass>Graphic_Single</graphicClass>
+			<shaderType>TransparentPostLight</shaderType>
+		</graphicData>
+		<projectile>
+			<damageDef>IGPlagueDmg_BioPlasmic</damageDef>
+			<damageAmountBase>20</damageAmountBase>
+			<explosionRadius>3.0</explosionRadius>
+			<speed>50</speed>
+			<soundExplode>BioPlasmaHitSound</soundExplode>
+			<flyOverhead>true</flyOverhead>
+			<armorPenetration>0.75</armorPenetration>
+		</projectile>
+	</ThingDef>
+
+</Defs>

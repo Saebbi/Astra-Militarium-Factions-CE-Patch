@@ -1,0 +1,30 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<Defs>
+
+	<ThingDef ParentName="BaseBullet">
+		<defName>Bullet_DreadRocket</defName>
+		<label>Dread Rocket</label>
+		<graphicData>
+			<texPath>Things/IGCore/Projectile/QXIGRocket</texPath>
+			<graphicClass>Graphic_Single</graphicClass>
+			<shaderType>TransparentPostLight</shaderType>
+		</graphicData>
+		<projectile>
+			<damageDef>IGBomb</damageDef>
+			<damageAmountBase>100</damageAmountBase>
+			<armorPenetration>4.0</armorPenetration>
+			<speed>40</speed>
+			<soundAmbient>RocketPropelledLoop_Small</soundAmbient>
+		</projectile>
+		<comps>
+			<li Class="CombatExtended.CompProperties_ExplosiveCE">
+				<explosionDamage>400</explosionDamage>
+				<explosionDamageDef>IGBomb</explosionDamageDef>
+				<explosionRadius>4</explosionRadius>
+				<soundExplode>IGLRG_Explosion</soundExplode>
+			</li>
+		</comps>
+		<thingClass>CombatExtended.ProjectileCE_Explosive</thingClass>
+	</ThingDef>
+	
+</Defs>

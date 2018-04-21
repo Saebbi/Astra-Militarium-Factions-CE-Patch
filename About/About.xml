@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ModMetaData>
+	<name>Astra Militarium Factions CE Patch</name>
+	<author>Saebbi</author>
+	<url></url>
+	<targetVersion>0.18.1722</targetVersion>
+	<description>Patches the Astra Militarium Factions Expansion to work with Combat Extended.</description>
+</ModMetaData>

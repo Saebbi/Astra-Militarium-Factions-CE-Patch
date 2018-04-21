@@ -1,0 +1,109 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Patch>
+
+	<Operation Class="CombatExtended.PatchOperationMakeGunCECompatible">
+		<defName>IG_Gun_CMBoltGun</defName>
+		<statBases>
+			
+			
+			<SightsEfficiency>1.1</SightsEfficiency>
+			<ShotSpread>0.12</ShotSpread>
+			<SwayFactor>1.4</SwayFactor>
+			<Bulk>14.2</Bulk> 
+		</statBases>
+		<Properties>
+			<verbClass>CombatExtended.Verb_ShootCE</verbClass>
+			<hasStandardCommand>true</hasStandardCommand>
+			<defaultProjectile>Bullet_CMBoltGun</defaultProjectile>
+			<warmupTime>3.0</warmupTime>
+			<range>30</range>
+			<ticksBetweenBurstShots>15</ticksBetweenBurstShots>
+			<burstShotCount>3</burstShotCount>
+			<soundCast>BoltGunSound</soundCast>
+			<soundCastTail>GunTail_Heavy</soundCastTail>
+			<muzzleFlashScale>13</muzzleFlashScale>
+			<targetParams>
+				<canTargetLocations>true</canTargetLocations>
+			</targetParams>
+			<recoilAmount>2.1</recoilAmount>
+			<recoilPattern>Regular</recoilPattern>
+		</Properties>
+		<AmmoUser>
+			<magazineSize>30</magazineSize>
+			<reloadTime>4.75</reloadTime>
+			<ammoSet>AmmoSet_CMBoltGun</ammoSet>
+		</AmmoUser>
+		<FireModes />
+		<weaponTags>
+			<li>CMBoltGun</li>
+		</weaponTags>
+	</Operation>
+
+	<Operation Class="CombatExtended.PatchOperationMakeGunCECompatible">
+		<defName>IG_Gun_CMPlasmaRifle</defName>
+		<statBases>
+			
+			
+			<SightsEfficiency>1.3</SightsEfficiency>
+			<ShotSpread>0.12</ShotSpread>
+			<SwayFactor>1.4</SwayFactor>
+			<Bulk>12.2</Bulk> 
+		</statBases>
+		<Properties>
+			<verbClass>CombatExtended.Verb_ShootCE</verbClass>
+			<hasStandardCommand>true</hasStandardCommand>
+			<defaultProjectile>Bullet_CMPlasmaRifle</defaultProjectile>
+			<warmupTime>4.0</warmupTime>
+			<range>30</range>
+			<soundCast>PlasmaGunSound</soundCast>
+			<soundCastTail>GunTail_Heavy</soundCastTail>
+			<muzzleFlashScale>15</muzzleFlashScale>
+			<recoilAmount>2.1</recoilAmount>
+			<recoilPattern>Regular</recoilPattern>
+		</Properties>
+		<AmmoUser>
+			<magazineSize>5</magazineSize>
+			<reloadTime>4.75</reloadTime>
+			<ammoSet>AmmoSet_CMPlasmaRifle</ammoSet>
+		</AmmoUser>
+		<FireModes />
+		<weaponTags>
+			<li>CMPlasmaRifle</li>
+		</weaponTags>
+	</Operation>
+
+	<Operation Class="CombatExtended.PatchOperationMakeGunCECompatible">
+		<defName>IG_Gun_DreadRktLauncher</defName>
+		<statBases>
+			
+			
+			<SightsEfficiency>1.1</SightsEfficiency>
+			<ShotSpread>0.12</ShotSpread>
+			<SwayFactor>1.4</SwayFactor>
+			<Bulk>12.2</Bulk> 
+		</statBases>
+		<Properties>
+			<verbClass>CombatExtended.Verb_ShootCEOneUse</verbClass>
+			<hasStandardCommand>true</hasStandardCommand>
+			<defaultProjectile>Bullet_DreadRocket</defaultProjectile>
+			<forcedMissRadius>3.0</forcedMissRadius>
+			<warmupTime>5</warmupTime>
+			<range>60</range>
+			<ticksBetweenBurstShots>40</ticksBetweenBurstShots>
+			<burstShotCount>8</burstShotCount>
+			<soundCast>IGRocketLaunch</soundCast>
+			<soundCastTail>GunTail_Heavy</soundCastTail>
+			<muzzleFlashScale>15</muzzleFlashScale>
+			<targetParams>
+				<canTargetLocations>true</canTargetLocations>
+			</targetParams>
+			<recoilAmount>0.0</recoilAmount>
+		</Properties>
+		
+		<FireModes />
+		<weaponTags>
+			<li>IG_Gun_DreadRktLauncher</li>
+		</weaponTags>
+	</Operation>
+	
+</Patch>
