@@ -20,7 +20,7 @@
 	
 	<!-- ==================== Ammo ========================== -->
 
-  <ThingDef Name="CM PlasmaRifleBase" ParentName="AmmoBase" Abstract="True">
+  <ThingDef Name="CMPlasmaRifleBase" ParentName="AmmoBase" Abstract="True">
     <description>CM Plasma Rifle ammo</description>
     <statBases>
 	  <Mass>0.01</Mass>
@@ -72,40 +72,5 @@
 	  <soundExplode>IGPLS_Explosion</soundExplode>
     </projectile>
   </ThingDef>
-	
-  <RecipeDef ParentName="AmmoRecipeBase">
-    <defName>MakeAmmo_CMPlasmaRifle</defName>
-    <label>make Chaos Plasma Rifle cartridge x20</label>
-    <description>Craft 20 Chaos Plasma Rifle cartridges.</description>
-    <jobString>Making Chaos Plasma Rifle cartridges.</jobString>
-    <ingredients>
-      <li>
-        <filter>
-          <thingDefs>
-            <li>Plasteel</li>
-          </thingDefs>
-        </filter>
-        <count>3</count>
-      </li>
-      <li>
-        <filter>
-          <thingDefs>
-            <li>Component</li>
-          </thingDefs>
-        </filter>
-        <count>3</count>
-      </li>
-    </ingredients>
-    <fixedIngredientFilter>
-      <thingDefs>
-        <li>Plasteel</li>
-        <li>Component</li>
-      </thingDefs>
-    </fixedIngredientFilter>
-    <products>
-      <Ammo_CMPlasmaRifle>20</Ammo_CMPlasmaRifle>
-    </products>
-	<researchPrerequisite>WRPlasmaRifle</researchPrerequisite>
-  </RecipeDef>
 	
 </Defs>

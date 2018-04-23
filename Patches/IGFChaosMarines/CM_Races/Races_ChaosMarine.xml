@@ -1,6 +1,16 @@
 <?xml version="1.0" encoding="utf-8" ?>
 <Patch>
 
+	<Operation Class="PatchOperationAddModExtension">
+		<success>Always</success>
+		<xpath>*/ThingDef[defName="IG_StdChaosMarineRace"]</xpath>
+		<value>
+			<li Class="CombatExtended.RacePropertiesExtensionCE">
+				<bodyShape>Humanoid</bodyShape>
+			</li>
+		</value>
+	</Operation>
+
 	<Operation Class="PatchOperationReplace">
 		<success>Always</success>
 		<xpath>*/ThingDef[defName="IG_StdChaosMarineRace"]/tools</xpath>

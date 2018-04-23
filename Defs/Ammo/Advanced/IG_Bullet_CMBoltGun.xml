@@ -72,39 +72,4 @@
     </projectile>
   </ThingDef>
 	
-  <RecipeDef ParentName="AmmoRecipeBase">
-    <defName>MakeAmmo_CMBoltGun</defName>
-    <label>make Chaos Marine BoltGun cartridge x90</label>
-    <description>Craft 90 Chaos Marine BoltGun cartridges.</description>
-    <jobString>Making Chaos Marine BoltGun cartridges.</jobString>
-    <ingredients>
-      <li>
-        <filter>
-          <thingDefs>
-            <li>Plasteel</li>
-          </thingDefs>
-        </filter>
-        <count>3</count>
-      </li>
-      <li>
-        <filter>
-          <thingDefs>
-            <li>Component</li>
-          </thingDefs>
-        </filter>
-        <count>3</count>
-      </li>
-    </ingredients>
-    <fixedIngredientFilter>
-      <thingDefs>
-        <li>Plasteel</li>
-        <li>Component</li>
-      </thingDefs>
-    </fixedIngredientFilter>
-    <products>
-      <Ammo_CMBoltGun>90</Ammo_CMBoltGun>
-    </products>
-	<researchPrerequisite>WRBoltGun</researchPrerequisite>
-  </RecipeDef>
-	
 </Defs>
