@@ -83,7 +83,7 @@
 		</value>
 	</Operation>
 
-	<Operation Class="PatchOperationReplace">
+	<Operation Class="PatchOperationAdd">
 		<success>Always</success>
 		<xpath>*/ThingDef[defName="IG_CMDreadnoughtRace"]/comps</xpath>
 		<value>
