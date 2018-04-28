@@ -88,7 +88,6 @@
 					<label>shaft</label>
 					<capacities>
 						<li>Blunt</li>
-						<li>Poke</li>
 					</capacities>
 					<power>20</power>
 					<cooldownTime>1.6</cooldownTime>
