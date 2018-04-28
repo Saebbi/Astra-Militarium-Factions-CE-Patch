@@ -85,7 +85,7 @@
 
 	<Operation Class="PatchOperationAdd">
 		<success>Always</success>
-		<xpath>*/ThingDef[defName="IG_CMDreadnoughtRace"]/comps</xpath>
+		<xpath>*/ThingDef[defName="IG_CMDreadnoughtRace"]/statbases</xpath>
 		<value>
 			<statBases>
 				<CarryWeight>5000</CarryWeight>
